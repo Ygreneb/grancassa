@@ -6,8 +6,8 @@
 
 using namespace VSTGUI;
 
-namespace Steinberg {
-namespace HelloWorld {
+namespace Benergy {
+namespace GranCassa {
 
 //-----------------------------------------------------------------------------
 tresult PLUGIN_API PlugController::initialize (FUnknown* context)
@@ -73,4 +73,4 @@ tresult PLUGIN_API PlugController::setComponentState (IBStream* state)
 
 //------------------------------------------------------------------------
 } // namespace
-} // namespace Steinberg
+} // namespace Benergy

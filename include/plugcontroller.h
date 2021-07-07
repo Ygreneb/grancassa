@@ -3,8 +3,10 @@
 #include "public.sdk/source/vst/vsteditcontroller.h"
 #include "vstgui/plugin-bindings/vst3editor.h"
 
-namespace Steinberg {
-namespace HelloWorld {
+namespace Benergy {
+namespace GranCassa {
+
+using namespace Steinberg;
 
 //-----------------------------------------------------------------------------
 class PlugController : public Vst::EditController, public VSTGUI::VST3EditorDelegate
@@ -28,5 +30,5 @@ public:
 };
 
 //------------------------------------------------------------------------
-} // namespace HelloWorld
-} // namespace Steinberg
+} // namespace GranCassa
+} // namespace Benergy

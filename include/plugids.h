@@ -1,7 +1,9 @@
 #pragma once
 
-namespace Steinberg {
-namespace HelloWorld {
+namespace Benergy {
+namespace GranCassa {
+
+using namespace Steinberg;
 
 // HERE are defined the parameter Ids which are exported to the host
 enum HelloWorldParams : Vst::ParamID
@@ -20,5 +22,5 @@ static const FUID MyControllerUID (0x143C25B4, 0xD9C14CDD, 0x9D534026, 0xE73EF07
 
 
 //------------------------------------------------------------------------
-} // namespace HelloWorld
-} // namespace Steinberg
+} // namespace GranCassa
+} // namespace Benergy

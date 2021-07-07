@@ -9,7 +9,7 @@
 
 BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb,	stringCompanyEmail)
 
-	DEF_CLASS2 (INLINE_UID_FROM_FUID(Steinberg::HelloWorld::MyProcessorUID),
+	DEF_CLASS2 (INLINE_UID_FROM_FUID(Benergy::GranCassa::MyProcessorUID),
 				PClassInfo::kManyInstances,	// cardinality  
 				kVstAudioEffectClass,	// the component category (do not changed this)
 				stringPluginName,		// here the Plug-in name (to be changed)
@@ -17,9 +17,9 @@ BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb,	stringCompanyEmail)
 				stringSubCategory,		// Subcategory for this Plug-in (to be changed)
 				FULL_VERSION_STR,		// Plug-in version (to be changed)
 				kVstVersionString,		// the VST 3 SDK version (do not changed this, use always this define)
-				Steinberg::HelloWorld::PlugProcessor::createInstance)	// function pointer called when this component should be instantiated
+				Benergy::GranCassa::PlugProcessor::createInstance)	// function pointer called when this component should be instantiated
 
-	DEF_CLASS2 (INLINE_UID_FROM_FUID(Steinberg::HelloWorld::MyControllerUID),
+	DEF_CLASS2 (INLINE_UID_FROM_FUID(Benergy::GranCassa::MyControllerUID),
 				PClassInfo::kManyInstances,  // cardinality   
 				kVstComponentControllerClass,// the Controller category (do not changed this)
 				stringPluginName "Controller",	// controller name (could be the same than component name)
@@ -27,7 +27,7 @@ BEGIN_FACTORY_DEF (stringCompanyName, stringCompanyWeb,	stringCompanyEmail)
 				"",						// not used here
 				FULL_VERSION_STR,		// Plug-in version (to be changed)
 				kVstVersionString,		// the VST 3 SDK version (do not changed this, use always this define)
-				Steinberg::HelloWorld::PlugController::createInstance)// function pointer called when this component should be instantiated
+				Benergy::GranCassa::PlugController::createInstance)// function pointer called when this component should be instantiated
 
 END_FACTORY
 

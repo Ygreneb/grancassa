@@ -5,8 +5,8 @@
 #include "pluginterfaces/base/ibstream.h"
 #include "pluginterfaces/vst/ivstparameterchanges.h"
 
-namespace Steinberg {
-namespace HelloWorld {
+namespace Benergy {
+namespace GranCassa {
 
 //-----------------------------------------------------------------------------
 PlugProcessor::PlugProcessor ()
@@ -172,4 +172,4 @@ tresult PLUGIN_API PlugProcessor::getState (IBStream* state)
 
 //------------------------------------------------------------------------
 } // namespace
-} // namespace Steinberg
+} // namespace Benergy
