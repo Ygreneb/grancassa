@@ -25,8 +25,10 @@ tresult PLUGIN_API PlugProcessor::initialize (FUnknown* context)
 
 	//---create Audio In/Out buses------
 	// we want a stereo Input and a Stereo Output
-	addAudioInput (STR16 ("AudioInput"), Vst::SpeakerArr::kStereo);
-	addAudioOutput (STR16 ("AudioOutput"), Vst::SpeakerArr::kStereo);
+	//addAudioInput (STR16 ("AudioInput"), Vst::SpeakerArr::kStereo);
+	addAudioOutput(STR16 ("AudioOutput"), Vst::SpeakerArr::kStereo);
+
+	addEventInput(STR16("EventInput"));
 
 	return kResultTrue;
 }
@@ -50,6 +52,8 @@ tresult PLUGIN_API PlugProcessor::setupProcessing (Vst::ProcessSetup& setup)
 {
 	// here you get, with setup, information about:
 	// sampleRate, processMode, maximum number of samples per audio block
+	mSynth.setSampleRate(setup.sampleRate);
+
 	return AudioEffect::setupProcessing (setup);
 }
 
@@ -109,7 +113,7 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData& data)
 
 	//--- Process Audio---------------------
 	//--- ----------------------------------
-	if (data.numInputs == 0 || data.numOutputs == 0)
+	if (data.numOutputs == 0)
 	{
 		// nothing to do
 		return kResultOk;
@@ -120,6 +124,8 @@ tresult PLUGIN_API PlugProcessor::process (Vst::ProcessData& data)
 		// Process Algorithm
 		// Ex: algo.process (data.inputs[0].channelBuffers32, data.outputs[0].channelBuffers32,
 		// data.numSamples);
+
+		mSynth.process(data);
 	}
 	return kResultOk;
 }

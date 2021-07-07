@@ -1,5 +1,7 @@
 #pragma once
 
+#include "synth.h"
+
 #include "public.sdk/source/vst/vstaudioeffect.h"
 
 namespace Benergy {
@@ -32,6 +34,8 @@ protected:
 	Vst::ParamValue mParam1 = 0;
 	int16 mParam2 = 0;
 	bool mBypass = false;
+
+	Synth mSynth;
 };
 
 //------------------------------------------------------------------------
